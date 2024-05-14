@@ -567,6 +567,15 @@ form textarea {
     justify-content: center;
   }
 
+   .languages-img img {
+    padding-left: 0;
+  }
+
+  .languages-img {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
   .contact-form form {
     width: 300px;
   }
