@@ -534,7 +534,6 @@ form textarea {
 
   .home-img {
     order: initial;
-
   }
 
   .home-text {
@@ -567,11 +566,12 @@ form textarea {
     justify-content: center;
   }
   
- .languages-container {
+   .languages-container {
     grid-template-columns: 1fr;
   }
+  
    .languages-img img {
-    padding-left: 0;
+    padding right: 0;
   }
 
   .languages-img {
