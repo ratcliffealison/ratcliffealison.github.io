@@ -566,6 +566,7 @@ form textarea {
     display: flex;
     justify-content: center;
   }
+  
  .languages-container {
     grid-template-columns: 1fr;
   }
