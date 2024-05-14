@@ -14,9 +14,11 @@ let darkmode = document.querySelector('#darkmode');
 darkmode.onclick = () =>{
     if(darkmode.classList.contains('bx-moon')){
         darkmode.classList.replace('bx-moon', 'bx-sun');
-        document.body.classList.add('active')
-    }else {
+         document.getElementById("profile-image").src = document.getElementById("profile-image").src.replace("_light", "_dark");
+         document.body.classList.add('active');
+        }else {
         darkmode.classList.replace('bx-sun', 'bx-moon');
+        document.getElementById("profile-image").src = document.getElementById("profile-image").src.replace("_dark", "_light");
         document.body.classList.remove('active')
     }
 }
