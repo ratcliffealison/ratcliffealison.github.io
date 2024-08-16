@@ -22,4 +22,58 @@ darkmode.onclick = () =>{
         document.body.classList.remove('active')
     }
 }
+ // Get elements
+ const lightbox = document.getElementById('lightbox');
+ const lightboxImg = document.getElementById('lightboxImg');
+ const closeBtn = document.querySelector('.close');
+ const galleryImages = document.querySelectorAll('.gallery-img img');
 
+ // Open lightbox
+ galleryImages.forEach((img, index) => {
+     img.addEventListener('click', () => {
+         lightbox.style.display = 'flex';
+         lightboxImg.src = img.src;
+         lightboxImg.alt = img.alt;
+         currentIndex = index;
+     });
+ });
+
+ // Close lightbox
+ closeBtn.addEventListener('click', () => {
+     lightbox.style.display = 'none';
+ });
+
+ // Close lightbox on clicking outside the image
+ lightbox.addEventListener('click', (e) => {
+     if (e.target === lightbox) {
+         lightbox.style.display = 'none';
+     }
+ });
+
+ // Variables to keep track of current image index
+ let currentIndex;
+
+ // Navigate to previous image
+ document.querySelector('.prev').addEventListener('click', () => {
+     if (currentIndex > 0) {
+         currentIndex--;
+         lightboxImg.src = galleryImages[currentIndex].src;
+         lightboxImg.alt = galleryImages[currentIndex].alt;
+     }
+ });
+
+ // Navigate to next image
+ document.querySelector('.next').addEventListener('click', () => {
+     if (currentIndex < galleryImages.length - 1) {
+         currentIndex++;
+         lightboxImg.src = galleryImages[currentIndex].src;
+         lightboxImg.alt = galleryImages[currentIndex].alt;
+     }
+ });
+
+ // Close on 'Escape' key press
+ document.addEventListener('keydown', (e) => {
+     if (e.key === 'Escape') {
+         lightbox.style.display = 'none';
+     }
+ });
