@@ -758,3 +758,11 @@ form textarea {
 .next:hover {
   color: #bbb;
 }
+
+#lightboxDescription {
+  color: #fff;
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 80%;
+}
