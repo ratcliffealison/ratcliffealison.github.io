@@ -62,7 +62,7 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #333;
+    background-color: #545454;
     color: white;
     text-decoration: none;
     padding: 10px 15px;
@@ -71,7 +71,7 @@ body {
   }
   
   .back-to-top:hover {
-    background-color: #ffcccc;
+    background-color: #b4b8a6;
     opacity: 1.0;
   }
   
